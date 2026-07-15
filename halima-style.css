@@ -1,0 +1,573 @@
+/*==============================
+GOOGLE FONTS
+===============================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/*==============================
+RESET
+===============================*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#1f242d;
+    color:#ffffff;
+}
+
+a{
+    text-decoration:none;
+    color:#ffffff;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/*==============================
+NAVBAR
+===============================*/
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 9%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f242d;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#7cf03d;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+}
+
+.navbar ul li{
+    margin-left:35px;
+}
+
+.navbar ul li a{
+    font-size:17px;
+    font-weight:500;
+    transition:.4s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li.active a{
+    color:#7cf03d;
+}
+
+/*==============================
+HOME
+===============================*/
+
+.home{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 9% 60px;
+    gap:50px;
+}
+
+.home-info{
+    flex:1;
+}
+
+.home-info h1{
+    font-size:58px;
+    line-height:1.2;
+}
+
+.home-info h2{
+    font-size:33px;
+    color:#7cf03d;
+    margin:12px 0;
+}
+
+.home-info p{
+    font-size:17px;
+    line-height:1.8;
+    margin:20px 0 35px;
+}
+
+/*==============================
+BUTTON
+===============================*/
+
+.btn-sci{
+    display:flex;
+    align-items:center;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 32px;
+    border-radius:40px;
+    background:#7cf03d;
+    color:#1f242d;
+    font-weight:600;
+    border:2px solid #7cf03d;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:transparent;
+    color:#7cf03d;
+    box-shadow:0 0 15px #7cf03d;
+}
+
+/*==============================
+SOCIAL ICONS
+===============================*/
+
+.sci{
+    margin-left:25px;
+    display:flex;
+}
+
+.sci a{
+    width:45px;
+    height:45px;
+    border:2px solid #7cf03d;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:12px;
+    color:#7cf03d;
+    font-size:20px;
+    transition:.4s;
+}
+
+.sci a:hover{
+    background:#7cf03d;
+    color:#1f242d;
+    box-shadow:0 0 15px #7cf03d;
+}
+
+/*==============================
+PROFILE IMAGE
+===============================*/
+
+.home-img{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.img-box{
+    position:relative;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    overflow:hidden;
+    padding:6px;
+}
+
+.img-box::before{
+    content:'';
+    position:absolute;
+    inset:-10px;
+    background:conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        #7cf03d
+    );
+    animation:rotate 4s linear infinite;
+}
+
+.img-box::after{
+    content:'';
+    position:absolute;
+    inset:8px;
+    background:#1f242d;
+    border-radius:50%;
+}
+
+.img-item{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    overflow:hidden;
+    z-index:2;
+}
+
+.img-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/*==============================
+BACKGROUND BARS
+===============================*/
+
+.bars-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    display:flex;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.bar{
+    flex:1;
+    background:#1f242d;
+}
+
+/*==============================
+ANIMATION
+===============================*/
+
+@keyframes rotate{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/*========================================
+    PROJECTS SECTION
+=========================================*/
+
+.projects{
+    padding:100px 9%;
+    background:#1f242d;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#7cf03d;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#b8b8b8;
+    font-size:17px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    background:#2b313d;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s ease;
+    border:2px solid transparent;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    border-color:#7cf03d;
+    box-shadow:0 0 20px rgba(124,240,61,.4);
+}
+
+.project-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+ 
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    font-size:24px;
+    color:#7cf03d;
+    margin-bottom:15px;
+}
+
+.project-content p{
+    font-size:15px;
+    color:#d8d8d8;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.project-icons{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.project-icons a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    border:2px solid #7cf03d;
+    color:#7cf03d;
+    font-size:22px;
+    transition:.4s;
+}
+
+.project-icons a:hover{
+    background:#7cf03d;
+    color:#1f242d;
+    box-shadow:0 0 15px #7cf03d;
+}
+
+/*========================================
+    SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#1f242d;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#7cf03d;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#66d62d;
+}
+
+/*========================================
+    RESPONSIVE DESIGN
+=========================================*/
+
+@media (max-width:991px){
+
+    .navbar{
+        padding:20px 5%;
+    }
+
+    .home{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:140px 5% 60px;
+    }
+
+    .btn-sci{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .sci{
+        margin-left:0;
+    }
+
+    .img-box{
+        width:320px;
+        height:320px;
+    }
+
+    .projects{
+        padding:80px 5%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .navbar ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .navbar ul li{
+        margin:10px 15px;
+    }
+
+    .home-info h1{
+        font-size:42px;
+    }
+
+    .home-info h2{
+        font-size:26px;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .img-box{
+        width:260px;
+        height:260px;
+    }
+
+    .home-info h1{
+        font-size:34px;
+    }
+
+    .home-info h2{
+        font-size:22px;
+    }
+
+    .btn{
+        padding:10px 25px;
+    }
+
+    .project-card img{
+        height:200px;
+    }
+
+}
+/*==============================
+MOBILE NAVIGATION
+==============================*/
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#7cf03d;
+    cursor:pointer;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    .navbar{
+        padding:20px 6%;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:-100%;
+        width:100%;
+        background:#2b313d;
+        flex-direction:column;
+        text-align:center;
+        transition:.4s;
+        padding:25px 0;
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .nav-links li{
+        margin:18px 0;
+    }
+
+    .home{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding-top:140px;
+        gap:40px;
+    }
+
+    .home-info h1{
+        font-size:40px;
+    }
+
+    .home-info h2{
+        font-size:24px;
+    }
+
+    .home-info p{
+        font-size:15px;
+    }
+
+    .btn-sci{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .sci{
+        margin-left:0;
+    }
+
+    .img-box{
+        width:280px;
+        height:280px;
+    }
+
+    .project-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Small Phones */
+
+@media (max-width:480px){
+
+    .home-info h1{
+        font-size:32px;
+    }
+
+    .home-info h2{
+        font-size:20px;
+    }
+
+    .home-info p{
+        font-size:14px;
+    }
+
+    .btn{
+        padding:10px 24px;
+        font-size:15px;
+    }
+
+    .img-box{
+        width:220px;
+        height:220px;
+    }
+
+    .project-card img{
+        height:180px;
+    }
+
+}
